@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Social Network</title>
+	<!-- Bootstrap -->
+	<link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">	
+</head>
+
+<style>
+  main {
+    margin-top: 60px;
+  }
+
+  #content {
+    display: none;
+  }
+</style>
+
+<body>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#" target="_blank">Social Network</a>
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap d-none d-sm-none d-sm-block">
+          <small><a class="nav-link" href="#"><span id="account"></span></a></small>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <main role="main" class="col-lg-12 d-flex justify-content-center">
+          <div id="loader" class="text-center">
+            <p class="text-center">Loading...</p>
+          </div>
+          <div id="content">
+            <form onsubmit="App.CreatePost(); return false;">
+              <div class="form-group">
+                <input type="input" class="form-control" id="postinput" placeholder="What's on your mind ?" aria-describedby="emailHelp">
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+            <br>
+            <div class="card" style="width: 40rem; display: none">
+              <div class="card-header author_address">
+                Post Author
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item content">Post Content</li>
+                <!-- <div class="row"> -->
+                <li class="list-group-item tipamount" onclick="App.tipPost">Total Tip
+<!--                   <span class="tipper btn btn-warning" style="float: right;">Tip 0.1 ether</span> -->
+                </li>
+                <span class="tipper btn btn-warning" style="float: right;">Tip 0.1 ether</span>
+              <!-- </div> -->
+              </ul>
+            </div>
+            <!-- <br> -->
+          </div>
+        </main>
+	  </div>
+	</div>	    
+</body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
+    <script src="index.js"></script>
+</html>
